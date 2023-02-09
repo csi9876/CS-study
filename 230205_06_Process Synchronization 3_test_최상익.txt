@@ -1,0 +1,18 @@
+1. 프로그램적 해결법의 충족조건 3가지 중 어떤 프로세스도 critical section에 있지 않은 상태에서 
+critical section에 들어가고자 하는 프로세스가 있다면 들어가도록 해주는 충족 조건을 골라라
+1)progress(진행)
+2)mutual exclusion(상호 배제)
+3)bounded waiting(유한 대기)
+
+
+2. Semaphores의 두가지 타입 중 도메인이 0이상인 정수값을 가지고 주로 resource counting에 사용하는 a와
+0 또는 1의 값을 가지며 주로 mutual exclusion (lock/unlock)에 사용하는 b를 알맞게 골라라
+1)counting semaphorre
+2)binary semaphore
+
+
+3. moniter에 대한 설명으로 옳지 않은 것은
+1) x.signal()를 실행했을 때 서스펜드된 모든 프로세스를 resume한다
+2) 모니터 내에서는 한번에 하나의 프로세스만 활동 가능하다
+3) 세마포어와 모니터의 코드는 서로 전환 가능하다
+4) xwait()을 invoke한 프로세스는 서스펜드 된다

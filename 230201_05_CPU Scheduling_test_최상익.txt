@@ -1,0 +1,17 @@
+1. cpu스케줄링이 필요한 경우는 프로세스에게 다음과 같은 상태변화가 있을 때이다
+다음 cpu를 강제로 빼앗긴 preemptive인 경우는 p, 자진하여 내놓은 nonpreemptive인 경우는 n을 표시하시오
+NPNP
+- Terminate
+- running > ready 
+- runnning > blocked 
+- blocked > ready 
+  
+2. multi lv Queue 스케줄링은 ready queue를 두개로 분할하여 작동하는데
+각 큐의 명칭과 어울리는 스케줄링의 방식을 알맞게 짝지으시오
+1) foreground  2)background   3) RR    4)FCFS 
+
+
+
+3. 라운드 로빈 스케줄링 방식에서 각 프로세스는 동일한 할당 시간 (   a    )를 가진다.
+(    a   )가 지나치게 길어지면 선입선출 방식의 스케줄링과 다를 바 없어지고 a가 지나치게 길어지면 
+문맥교환이 너무 빈번하게 발생해 효율이 떨어진다. 다음에서 a는?
