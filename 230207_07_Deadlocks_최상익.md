@@ -10,8 +10,6 @@
   
   - 프로세스가 자원을 사용하는 절차(request요청, allocate획득, use사용, release반납)
 
-
-
 #### deadlock 발생의 4가지 조건
 
 - mutual exclusion (상호 배제) : 매 순간 하나의 프로세스만이 자원을 사용할 수 있음
@@ -148,8 +146,6 @@
 
 - 
 
-
-
     
 
 #### deadlock detection
@@ -213,13 +209,3 @@
 - deadlock이 드물게 발생하므로 예방 자체가 더 큰 overhead일 수 있음
 
 - 사람이 느낀 후 직접 process를 죽이는 방법
-
-
-
-
-
-
-
-
-
-
