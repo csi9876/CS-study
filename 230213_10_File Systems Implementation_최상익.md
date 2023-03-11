@@ -88,8 +88,8 @@
     - file offset : 파일 어느 위치 접근 중인지 표시
 
 - file descriptor : open file table에 대한 위치 정보
-
- cf) LRU, LFU와 같은 알고리즘을 사용한 버퍼 캐싱이 가능
+  
+  cf) LRU, LFU와 같은 알고리즘을 사용한 버퍼 캐싱이 가능
 
 버퍼 안에 데이터가 있든 없든, 시스템 콜을 호출하여 CPU의 제어권이 운영 체제로 넘어오기 때문
 
@@ -230,22 +230,30 @@
 #### unix 파일 시스템 구조
 
 - 유닉스 파일 시스템의 중요 개념
+  
   - Boot block
+    
     - 어떤 파일시스템에서도 맨 앞에 존재하는, 0번 블록
     
     - 부팅에 필요한 정보를 담고 있는 블록
+  
   - Super block
+    
     - 파일 시스템에 관한 총체적인 정보를 담고 있는 블록
     - 어디가 빈 블록이고 어디가 정보를 담고 있는 블록인지
+  
   - Inode list
+    
     - 파일 이름을 제외한 파일의 모든 메타 데이터를 따로 저장한다.
     - 파일 하나 당 Inode가 하나씩 할당이 되고, 해당 Inode는 그 파일의 메타 데이터를 갖고 있다.
     - 파일의 이름은 디렉토리가 직접 가지고 있다
     - 나머지 메타 데이터들은 inode에 저장 (unix의 핵심)
     - 인덱스 할당을 사용
     - direct blocks는 파일이 존재하는 인덱스를 저장하는 인덱스 블록이다. 작은 파일을 다름
-    -  single indirect를 통해서 큰 파일 저장, 그보다 더 큰 파일은 double indirect, 더 큰 파일은 triple indirect 방식을 취한다.
+    - single indirect를 통해서 큰 파일 저장, 그보다 더 큰 파일은 double indirect, 더 큰 파일은 triple indirect 방식을 취한다.
+  
   - Data block
+    
     - 파일의 실제 내용을 보관하는 블록
     - 이 중 디렉토리 파일은 자신의 디렉토리에 속한 파일들의 이름과 Inode 번호를 가지고 있다.
 
@@ -280,11 +288,14 @@
   - 공간의 낭비가 없다.
 
 - Grouping
+  
   - Linked list  변형
   - 첫 번째 free 블록이 n 개의 pointer을 가짐
     - n-1 pointer는 free data block를 가리킴
     - 마지막 pointer가 가리키는 block는 또 다시 n pointer를 가짐
+
 - Counting
+  
   - 프로그램들이 종종 여러 개의 연속적인 블록을 할당하고 반납한다는 성질에 착안
 
     
@@ -314,6 +325,7 @@
   - 디렉토리 내에 직접 보관
   
   - 디렉토리에는 포인터를 두고 다른 곳에 보관
+    
     - Inode, FAT 등
 
 - Long file name의 지원
@@ -369,7 +381,3 @@
 ![](230213_10_File%20Systems%20Implementation_최상익_assets/2023-02-13-22-25-08-image.png)
 
 - 프로그램이 실행되면 프로세스가 되어 프로세스 주소 공간이 생성
-
-
-
-
