@@ -1,0 +1,36 @@
+26
+1 30,null / 3, 0
+2 concat   d   
+3 0           d
+4 where count >= 2    x having count(*) >= 2
+5 dname                 x cube(dname, job)
+6 매출집계              x sum(매출액) over (parition by 매출월 order by 매출월 range between un
+7 revoke             d
+8 hash join         d
+
+25
+1 2                               d
+2 col1 <> A01                x NVL(col1, 'x') <> 'a01'
+3  5                             d
+4                                 x 비용기반 올티마이저
+5 col1                          x rollup(col1, col2)
+6 partition by col1 order by col3     x ~~~~~~~~~~
+7 percent_rank                   d
+8 내추럴 이너 조인              x    nested loop join
+
+24  
+1. 원자성                         d
+3. col3                           x row_number
+4. inner join                    x  intersect
+5. 5 4                              d
+6. emp_id = mgr_id              d 
+
+21.
+1. upper                         d
+2. max(level)                         d
+3. p.사원번호 is null                 d
+4. 3+4+6 = 13                       x
+5. where                              d
+6. 7                                      d
+7. 0                                    d
+

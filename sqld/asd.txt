@@ -1,0 +1,42 @@
+3 x 1 dw
+2 o 2 
+3 x 2 ss
+4 x 1 dw
+1 d 1 
+-
+3 d 3 
+2 d 2
+2 d 2 
+2 x 3 ss
+? x 4 ss
+-
+3 x 4 dw
+3 d 3 dw
+3 x 1 dw 
+? x 3,4 
+1 d dw
+-
+1 d 1 dw
+3 x 2 ss
+2 x 4 dw
+4 d dw 
+2 d dw 
+-
+3 x  2 ss
+4  x  3 dw
+1 d dw
+1 d dw
+3 x 4 ss 
+-
+1 d dw 
+4 x 3 dw
+3 d 3 dw
+3 x 2 dw
+N1 x upper dw
+-
+EMPNO x max(level)
+not p x p.사원번호 is null
+3 x 18 ss
+where d
+4 x 7 dw
+0 d dw
